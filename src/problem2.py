@@ -45,9 +45,52 @@ def test_factor_sum():
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
 
+    # Test 1:
+    expected = 11
+    actual = factor_sum(28)
+    print()
+    print('  Expected:  ', expected)
+    print('  Actual:  ', actual)
+
+    # Test 2:
+    expected = 7
+    actual = factor_sum(4)
+    print()
+    print('  Expected:  ', expected)
+    print('  Actual:  ', actual)
+
+    # Test 3:
+    expected = 4
+    actual = factor_sum(25)
+    print()
+    print('  Expected:  ', expected)
+    print('  Actual:  ', actual)
+
+    # Test 4:
+    expected = 6
+    actual = factor_sum(5)
+    print()
+    print('  Expected:  ', expected)
+    print('  Actual:  ', actual)
+
+    # Test 5:
+    expected = 3
+    actual = factor_sum(6)
+    print()
+    print('  Expected:  ', expected)
+    print('  Actual:  ', actual)
+
+
 
 def factor_sum(n):
-    """
+    total = 0
+    for k in range(n):
+        if n % k is 0:
+            total = total + k
+        else:
+            total = total + 0
+    return total
+"""
     Given a positive integer n,
     returns the sum of the digits of the sum of the distinct factors of n,
     where a FACTOR of n is an integer that divides evenly into n.
@@ -69,7 +112,7 @@ def factor_sum(n):
     so this function returns 4 when n is 28.
 
        *** ASK FOR AN EXPLANATION IF YOU DO NOT UNDERSTAND THE ABOVE. ***
-    """
+"""
     ###########################################################################
     #  This function is PURPOSELY implemented INCORRECTLY (it just returns 0).
     #  DO NOT IMPLEMENT  factor_sum.  Just leave it as it is (returning 0).
