@@ -46,13 +46,13 @@ def run_test_problem4():
 def problem4(number_of_stairs, step_size, starting_point, window):
     for k in range(number_of_stairs):
         start1 = rg.Point(starting_point.x + (step_size * k), starting_point.y - (step_size * k))
-        endpoint = rg.Point(starting_point.x, starting_point.y - step_size)
+        endpoint = rg.Point(starting_point.x + (step_size * k), starting_point.y - (step_size + (step_size*k)))
         line1 = rg.Line(start1, endpoint)
         line1.color = 'magenta'
         line1.thickness = 3
         line1.attach_to(window)
-        start2 = rg.Point(line1.end.x, line1.end.y)
-        endpoint2 = rg.Point(line1.end.x + step_size, line1.end.y)
+        start2 = rg.Point(line1.end.x + (step_size * k), line1.end.y + (step_size * k))
+        endpoint2 = rg.Point(line1.end.x + (step_size - (step_size * k)), line1.end.y - (step_size * k))
         line2 = rg.Line(start2, endpoint2)
         line2.attach_to(window)
         line2.thickness = 3
