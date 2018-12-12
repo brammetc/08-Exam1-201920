@@ -3,8 +3,8 @@ Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Tanner Brammeier.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -137,7 +137,14 @@ def run_test_problem3a():
 
 
 def problem3a(r, s):
-    """
+    total = 0
+    for k in range(r, s + 1):
+        if sum_of_digits(k ** 3) % 2 is 1:
+            total = total + k
+        else:
+            total = total + 0
+    return total
+"""
     What comes in:  Positive integers r and s, with r <= s.
     What goes out:
       -- Returns the sum of all the integers from r to s, inclusive,
@@ -161,9 +168,9 @@ def problem3a(r, s):
           -- 3 cubed is    27, whose sum of digits is  9, which is ODD.  (YES!)
           -- 4 cubed is    64, whose sum of digits is 10, which is NOT odd.
           -- 5 cubed is   125, whose sum of digits is  8, which is NOT odd.
-    """
+"""
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -261,7 +268,12 @@ def run_test_problem3b():
 
 
 def problem3b(m, r):
-    """
+    total = 0
+    for k in range(m + 1):
+        total = total + k/(r + (k-1)) ** k
+    return total
+
+"""
     What comes in:  A positive integer m and a number r.
     What goes out:
       -- Returns the sum that is the first  m  terms of the series
@@ -278,9 +290,9 @@ def problem3b(m, r):
       -- problem3b(4, 0.1) returns
            1/(0.1)  +  2/((1.1)**2)  +  3/((2.1)**3)  +  4/(3.1)**4)),
            which is approximately 12.020144157845959.
-     """
+"""
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
 
